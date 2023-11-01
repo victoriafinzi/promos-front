@@ -1,0 +1,82 @@
+<style>
+    h1 {
+        color: #4caf50;
+        margin: 0px;
+    }
+
+    body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .login-container {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 500px;
+        height: 400px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .login-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="phone"] {
+        width: 95%;
+        padding: 10px;
+        border: none;
+        background-color: #555;
+        color: #fff;
+        border-radius: 5px;
+        height: 30px;
+        font-size: 18px;
+    }
+
+    .form-group button {
+        width: 100%;
+        padding: 15px;
+        border: none;
+        background-color: #4caf50;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 8px;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .form-group button:hover {
+        background-color: #45a049;
+    }
+
+</style>
+<body>
+    <div class="login-container">
+    <h1>Promos</h1>
+    <h2>Se cadastre para receber promoções</h2>
+    <form>
+        <div class="form-group">
+            <input type="text" id="name" [(ngModel)]="name" name="name" placeholder="Digite seu nome" required>
+        </div>
+        <div class="form-group">
+            <input type="phone" id="phone" [(ngModel)]="phone" name="phone" placeholder="Digite seu telefone" required>
+        </div>
+        <div class="form-group">
+            <button type="submit" (click)="onSubmit()">Cadastrar</button>
+        </div>
+    </form>
+</div>
+</body>
+
